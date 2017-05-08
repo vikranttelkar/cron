@@ -6,9 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-cron "sidekiq_cronjob" do
+cron "cronjob" do
   minute "*/5"
   command "echo 'Hello World' > /tmp/logs"
   mailto "vikrant.telkar@gmail.com"
   user "root"
 end
+
