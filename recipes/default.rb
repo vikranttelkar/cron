@@ -10,5 +10,5 @@ cron "sidekiq_cronjob" do
   minute "*/5"
   command "echo 'Hello World' > /tmp/logs"
   mailto "vikrant.telkar@gmail.com"
-  user "ubuntu"
+  user "root"
 end
