@@ -9,7 +9,20 @@
 cron "cronjob" do
   minute "*/5"
   command "echo 'Hello World' > /tmp/logs"
-  mailto "vikrant.telkar@gmail.com"
+  mailto "yahoo@gmail.com"
   user "root"
 end
 
+#Installed httpd, restart service and updated index.html file. 
+package "httpd"
+
+service "httpd" do
+  action :restart
+end
+
+file '/var/www/html/index.html' do
+  content "Hello to world from Aarya"
+  mode '0644'
+  owner 'root'
+  group 'root'
+end
