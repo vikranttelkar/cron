@@ -26,3 +26,7 @@ file '/var/www/html/index.html' do
   owner 'root'
   group 'root'
 end
+
+execute 'update_packages' do
+ command 'yum update all -y'
+end
